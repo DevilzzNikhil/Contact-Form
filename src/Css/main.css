@@ -1,0 +1,344 @@
+@import url('https://fonts.googleapis.com/css2?family=Joan&family=Poppins&family=Roboto:wght@100&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+.contact_form {
+    width: 100vw;
+    min-height: 150vh;
+    height: fit-content;
+      background: linear-gradient(to right,
+            #f37335,
+            #fdc830);
+    background-size: cover;
+    background-size: 100% 100%;
+}
+
+.box {
+    position: absolute;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    height: fit-content;
+    min-height: 100vh;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -20%);
+    border-radius: 8px;
+    box-shadow: 0px -1px 43px 14px white;
+}
+
+.left {
+    width: 30%;
+    background: linear-gradient(to bottom, #4a4675, #1b183b);
+    transform: scale(1.07);
+    border-radius: 4px;
+    position: relative;
+    color: white;
+    padding: 15px;
+    box-shadow: -1px -1px 43px 8px white;
+    z-index: 1;
+    overflow-x: scroll;
+}
+
+.left::-webkit-scrollbar {
+    display: none;
+}
+
+.light-grey {
+    color: #aaa;
+    font-weight: bold;
+}
+
+.left .heading {
+    font-size: xx-large;
+    padding: 5px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+}
+
+.left div {
+    /* background-color: blue; */
+    margin: 5px;
+    padding: 15px;
+}
+
+.left div p {
+    font-size: large;
+    font-family: 'Poppins', sans-serif;
+}
+
+.left_footer {
+    color: white;
+}
+
+.left_footer a {
+    color: white;
+    margin: 0px 4px;
+    padding: 8px;
+    font-size: x-large;
+}
+
+.right {
+    width: 70%;
+    position: relative;
+    color: #1b183b;
+    padding: 15px 25px;
+    box-shadow: +1px -1px 43px 14px #1b183b;
+}
+
+.right .heading1 {
+    font-weight: 900;
+    font-size: xxx-large;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+    padding: 5px;
+}
+
+form input {
+    width: 100%;
+    height: 50px;
+    transition: all 0.3s ease-in-out;
+}
+
+.label1,
+.label2,
+.label3,
+.label4,
+.label5 {
+    font-size: 1.7rem;
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    transition: all 0.3s ease-out;
+    color: #737373;
+    visibility: 2%;
+}
+
+.exclamation {
+    font-size: x-large;
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    transition: all 0.3s ease-out;
+    color: #e74c3c;
+    visibility: hidden;
+}
+
+.check {
+    font-size: x-large;
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    transition: all 0.3s ease-out;
+    color: #2ecc71;
+    visibility: hidden;
+}
+
+.visible {
+    visibility: visible;
+}
+
+.right form .group {
+    margin: 5px;
+    padding: 15px;
+    position: relative;
+}
+
+.submit {
+    width: 80%;
+    padding: 15px;
+    background-color: #1b183b;
+    color: white;
+    text-align: center;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: x-large;
+    margin-bottom: 0;
+}
+
+form .group input {
+    font-size: 1.5rem;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    border: 1px solid black;
+    border-radius: 8px;
+    outline: none;
+    cursor: grabbing;
+}
+
+form .group textarea {
+    width: 100%;
+    font-size: 1.5rem;
+    border: 1px solid black;
+    border-radius: 8px;
+    outline: none;
+    cursor: grabbing;
+}
+
+form .group input:focus {
+    border: 3px solid lightblue;
+}
+
+form .group textarea:focus {
+    border: 3px solid lightblue;
+}
+
+
+input:focus+label {
+    font-size: 1.5rem;
+    position: relative;
+    top: -65px;
+    left: 15px;
+    transition: all 0.3s ease-out;
+    color: black;
+    z-index: 20;
+    font-weight: bold;
+}
+
+.label-top {
+    font-size: 1.5rem;
+    position: relative;
+    top: -65px;
+    left: 15px;
+    transition: all 0.3s ease-out;
+    color: black;
+    z-index: 20;
+    font-weight: bold;
+}
+
+.mr-3{
+    margin-right: 3px;
+}
+
+
+form .success input {
+    border-color: #2ecc71;
+    border-width: 2px;
+}
+
+form .error input {
+    border-color: #e74c3c;
+    border-width: 2px;
+}
+
+form .error .exclamation {
+    visibility: visible;
+}
+
+form .success .check {
+    visibility: visible;
+}
+
+
+@media only screen and (max-width : 1000px) {
+    .box {
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+        height: fit-content;
+        background-color: transparent;
+        border-radius: none;
+        box-shadow: none;
+        top: 0%;
+        left: 50%;
+        transform: translate(-50%, 0%);
+    }
+
+    .contact_form {
+        width: 100vw;
+        height: 230vh;
+    }
+
+    .left {
+        transform: scale(0.9);
+        width: 100%;
+        border-radius: 8px;
+        box-shadow: 0px -1px 43px 14px #d2d4d4;
+    }
+
+    .right {
+        width: 100%;
+        background-color: white;
+        border-radius: 18px;
+        box-shadow: 0px -1px 43px 14px #d2d4d4;
+        padding: 15px 0px;
+    }
+
+    .left div {
+        /* background-color: blue; */
+        margin: 5px;
+        padding: 15px;
+    }
+
+    .left div p {
+        font-size: x-large;
+        font-family: 'Poppins', sans-serif;
+    }
+
+}
+
+@media only screen and (max-width : 600px) {
+
+    .box {
+        width: 90%;
+    }
+    .left div p {
+        font-size: x-large;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    form .group input {
+        font-size: 1rem;
+        font-weight: 200;
+    }
+
+    form .group textarea {
+        font-size: 1rem;
+    }
+
+    .submit {
+        width: 90%;
+        font-size: x-large;
+        padding: 14px 14px ;
+    }
+
+    .label1,
+    .label2,
+    .label3,
+    .label4,
+    .label5 {
+        font-size: 1.2rem;
+    }
+}
+
+@media only screen and (max-width : 400px)
+{
+    .left .heading {
+        font-size: x-large;
+    }
+    .left div p {
+        font-size: large;
+        font-family: 'Poppins', sans-serif;
+    }
+    .right .heading1 {
+        font-weight: 900;
+        font-size: xx-large;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        text-align: center;
+        padding: 5px;
+    }
+    .submit {
+        width: 50%;
+        font-size: large;
+        padding: 8px 4px ;
+    }
+
+}
